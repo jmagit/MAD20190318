@@ -1,0 +1,8 @@
+Seleccionar todos los productos cuyo peso esté comprendido entre  10 y 100.
+Obtener un listado de todos los colores diferentes que hay en los productos de estilo femenino.
+Obtener una lista con los productos ordenada por peso y dentro de él por colores.
+Obtener los productos rojos, azules y negros
+Se pide una lista que recupere el peso de todos los productos cuyo número de producto empiece por ‘BK’.
+Obtener el Número de producto, Nombre y Precio de venta de los productos de Carretera y Montaña 
+Obtener los 5 productos mas caros de la línea estándar y estilo universal.
+Obtener los productos de gama alta plateados y los de gama baja negros.
