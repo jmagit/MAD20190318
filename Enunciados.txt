@@ -6,3 +6,15 @@ Se pide una lista que recupere el peso de todos los productos cuyo número de pr
 Obtener el Número de producto, Nombre y Precio de venta de los productos de Carretera y Montaña 
 Obtener los 5 productos mas caros de la línea estándar y estilo universal.
 Obtener los productos de gama alta plateados y los de gama baja negros.
+
+
+Calcular el porcentaje de beneficio [(P. Venta- P. Coste)/P. Venta] de los productos.
+Calcular la edad de los empleados
+Calcular la nueva lista de precios donde los artículos de estilo masculino suban un 20% y los femeninos un 10%, el nombre del producto se debe mostrar en mayúsculas.
+Calcular un nuevo código de producto con el formato (utilizar la X como carácter sustitutivo de los valores desconocidos):
+    X: Línea de producto
+    X: Gama
+    X: Estilo
+    XXX: 3 primeras letras del nombre en mayúsculas
+    X: Inicial del color en mayúsculas
+    999999: 6 dígitos con el identificador de producto
