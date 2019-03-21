@@ -52,3 +52,17 @@ EXCEPT
 SELECT *
 FROM Production.Product
 where SafetyStockLevel = 500
+
+
+SELECT c.Name cat, /*sc.Name SC,*/ pm.Name Modelo, u.name Unidad, w.Name Peso, p.*, u.*
+FROM Production.Product p left join [Production].[UnitMeasure] u
+	on p.SizeUnitMeasureCode = u.UnitMeasureCode
+	left join [Production].[UnitMeasure] w
+	on p.WeightUnitMeasureCode = w.UnitMeasureCode
+	left join [Production].[ProductSubcategory] sc 
+	on p.ProductSubcategoryID = sc.ProductSubcategoryID
+	left join [Production].[ProductCategory] c
+	on sc.ProductCategoryID = c.ProductCategoryID
+	left join [Production].[ProductModel] pm
+	on p.ProductModelID = pm.ProductModelID
+
