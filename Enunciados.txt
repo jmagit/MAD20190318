@@ -19,8 +19,11 @@ Calcular un nuevo código de producto con el formato (utilizar la X como caráct
     X: Inicial del color en mayúsculas
     999999: 6 dígitos con el identificador de producto
 
+
 Calcular el precio medio de los pedidos
 Calcular el total de las ventas trimestrales, el numero de pedios, el pedido máximo y el mínimo
 Mostrar el total de las ventas mensuales de los pedidos enviados de los meses que hayan superado el millar de pedidos
 Clasificar a los vendedores por el volumen de ventas
 Resumir los productos por subcategorias indicando en cada fila cuantos productos hay de cada una de las gamas.
+
+
