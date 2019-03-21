@@ -27,3 +27,8 @@ Clasificar a los vendedores por el volumen de ventas
 Resumir los productos por subcategorias indicando en cada fila cuantos productos hay de cada una de las gamas.
 
 
+Calcular  la diferencia del precio de venta del producto respecto a la media de su subcategoria, el mas caro y el mas barato.
+Crear un ranking de los productos por su precio de coste.
+Clasificar los productos por su precio de venta: Caros, Normales, Baratos.
+
+
