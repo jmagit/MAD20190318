@@ -59,3 +59,25 @@ SELECT  Name, [ListPrice],
 	end 
 FROM Production.Product
 							
+
+SELECT        Ped.SalesPersonID, Ven.FirstName + ' ' + Ven.LastName Vendedor, COUNT(*) AS [Número Pedidos], SUM(Ped.TotalDue) AS [Total Ventas]
+FROM            Sales.SalesOrderHeader AS Ped INNER JOIN
+                         Sales.SalesPerson AS SP ON Ped.SalesPersonID = SP.BusinessEntityID INNER JOIN
+                         HumanResources.Employee AS E ON SP.BusinessEntityID = E.BusinessEntityID INNER JOIN
+                         Person.Person AS Ven ON E.BusinessEntityID = Ven.BusinessEntityID AND E.BusinessEntityID = Ven.BusinessEntityID
+GROUP BY Ped.SalesPersonID, Ven.FirstName, Ven.LastName
+ORDER BY Ven.FirstName, Ven.LastName
+
+SELECT        Ped.SalesOrderID, Ped.RevisionNumber, Ped.OrderDate, Ped.DueDate, Ped.ShipDate, Ped.Status, Ped.OnlineOrderFlag, Ped.SalesOrderNumber, Ped.PurchaseOrderNumber, Ped.AccountNumber, 
+                         Cliente.FirstName + ' ' + Cliente.LastName AS Cliente, Ped.SalesPersonID, Sales.SalesTerritory.Name AS Zona, Ped.BillToAddressID, Ped.ShipToAddressID, Ped.ShipMethodID, Ped.CreditCardID, Ped.CreditCardApprovalCode, 
+                         Ped.CurrencyRateID, Ped.SubTotal, Ped.TaxAmt, Ped.Freight, Ped.TotalDue, Ped.Comment, Ped.rowguid, Ped.ModifiedDate
+FROM            Sales.SalesTerritory RIGHT OUTER JOIN
+                         Sales.SalesOrderHeader AS Ped ON Sales.SalesTerritory.TerritoryID = Ped.TerritoryID AND Sales.SalesTerritory.TerritoryID = Ped.TerritoryID LEFT OUTER JOIN
+                         Person.Person AS Vendedor ON Ped.SalesPersonID = Vendedor.BusinessEntityID LEFT OUTER JOIN
+                         Person.Person AS Cliente ON Ped.CustomerID = Cliente.BusinessEntityID
+
+SELECT        P.SalesOrderID, SUM(LP.LineTotal) AS [Total lineas], P.SubTotal
+FROM            Sales.SalesOrderHeader AS P INNER JOIN
+                         Sales.SalesOrderDetail AS LP ON P.SalesOrderID = LP.SalesOrderID
+GROUP BY P.SalesOrderID, P.SubTotal
+HAVING        (P.SubTotal <> SUM(LP.LineTotal))
