@@ -32,3 +32,8 @@ Crear un ranking de los productos por su precio de coste.
 Clasificar los productos por su precio de venta: Caros, Normales, Baratos.
 
 
+Completar los ejercicios anteriores sustituyendo los identificadores migrados (FK) por información significativa de la entidad (nombre, nombre y apellidos, …)
+Crear un listado completo de pedidos sustituyendo los identificadores por sus descripciones.
+Elaborar un listado de categorías, sub categorías y productos.
+Comprobar que los totales de los pedidos son correctos usando las líneas como referencias.
+Listar los productos que ha adquirido cada uno de los clientes.
